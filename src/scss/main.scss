@@ -1,0 +1,139 @@
+@import 'utils/vars';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $backgroundColor;
+  color: $fontColor;
+  font-family: $mainFont;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+
+.stock-header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $backgroundColor;
+  flex-direction: row;
+  border-bottom: 1px solid $buttonColor;
+
+  .header-element {
+    display: flex;
+    flex-direction: row;
+    width: calc((100vw/5)-1px);
+
+    .cur-info {
+      flex-direction: column;
+      width: calc(100vw/10);
+
+      h3 {
+        margin: 1.6vh auto 1vh 0.5vw
+      }
+
+      p {
+        margin: 0.6vh auto 1vh 0.5vw;
+      }
+    }
+    .gen-info {
+      border-right: 1px solid $buttonColor;
+      flex-direction: column;
+      width: calc(100vw/10);
+
+      h3, select {
+        margin-top: 1.2vh;
+      }
+      select {
+        width: 8vw;
+        background: $backgroundColor;
+        color: $fontColor;
+        outline-color: green;
+
+        option:hover {
+          background: $buttonColor;
+        }
+      }
+    }
+  }
+}
+
+.current-value {
+  display: flex;
+  flex-direction: row;
+  border: 0.5px solid $buttonColor;
+  width: 90vw;
+  height: 17vh;
+  margin: 3vh 5vw 1vh 5vw;
+
+  .gen-data {
+    border: none;
+    margin: 0;
+
+    .first {
+      flex-direction: column;
+      width: 25vw;
+    }
+    .second {
+      flex-direction: column;
+      width: 25vw;
+    }
+    p {
+      margin: 3vh 1vw 0 2vw;
+      font-size: 19px;
+    }
+  }
+
+  .cur-data {
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    margin: 1vh 0 0 1vw;
+  }
+  h2 {
+    margin-top: 1.5vh;
+    font-weight: normal;
+  }
+  h1 {
+    margin-top: 2vh
+  }
+}
+
+.chart {
+  margin: 3vh 0 0 5vw;
+  width: 70vw;
+  float: left;
+}
+
+.mixed-chart {
+  color: black;
+  width: 70vw;
+}
+
+.select-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20vh;
+  padding: 4vw;
+
+  p {
+    font-size: 19px;
+  }
+  select {
+    width: 10vw;
+    height: 5vh;
+    background: $backgroundColor;
+    color: $fontColor;
+  }
+}
+
+
+@import 'utils/mixins';

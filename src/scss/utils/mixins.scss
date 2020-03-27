@@ -1,0 +1,150 @@
+@include mediaSm {
+  .stock-header {
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 12px;
+
+    .header-element {
+      display: inline-block;
+      width: 50vw;
+      padding-left: 2vw;
+
+      .cur-info {
+        width: calc(50vw/2);
+      }
+
+      .gen-info {
+        width: calc(50vw/2);
+
+        select {
+          width: 17vw;
+        }
+      }
+    }
+  }
+
+  .current-value {
+    flex-direction: column;
+    width: 97vw;
+    height: 27vh;
+    margin: 1.5vw 1.5vw 0 1.5vw;
+    font-size: 12px;
+
+    .gen-data {
+      flex-direction: row;
+      width: 97vw;
+      height: 14vh;
+
+      .first {
+        width: 40vw;
+
+        p {
+          font-size: 15px;
+        }
+      }
+
+      .second {
+        p {
+          font-size: 15px;
+        }
+        width: 57vw;
+      }
+    }
+
+    .cur-data {
+      width: 97vw;
+      margin: 0;
+      align-items: center;
+    }
+  }
+
+  .chart {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    margin: 0;
+
+    .mixed-chart {
+      width: 95vw;
+    }
+  }
+
+  .select-elements {
+    flex-direction: row;
+    p {
+      font-size: 17px;
+      margin: 0 2vw 0 0;
+    }
+    select {
+      width: 80px;
+      height: 3vh;
+      margin-right: 13vw;
+    }
+  }
+}
+
+@include mediaMd {
+  .stock-header {
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+
+    .header-element {
+      display: inline-block;
+      width: 30vw;
+      padding-left: 3vw;
+
+      .cur-info {
+        width: calc(30vw/2);
+      }
+
+      .gen-info {
+        width: calc(30vw/2)
+      }
+    }
+  }
+
+  .current-value {
+
+    .gen-data {
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .gen-data:nth-child(3) {
+      width: 50vw;
+    }
+
+    .cur-data {
+      align-items: flex-end;
+      margin: 2vh 4vw 0 0;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+
+    h1 {
+      font-size: 19px;
+    }
+  }
+
+  .select-elements {
+    margin-top: 5vw;
+
+    select {
+      width: 80px;
+    }
+  }
+}
+
+@include mediaLg {
+
+}
+
+@include mediaXl {
+
+}
