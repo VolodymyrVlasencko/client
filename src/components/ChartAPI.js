@@ -25,7 +25,7 @@ const ChartAPI = ({ ...props }) => {
   if (props.period == 'Year') data_period = 12*2629746
   if (props.period == '2 Years') data_period = 24*2629746
   if (props.period == '3 Years') data_period = 36*2629746
-  if (props.period == '6 Years') data_period = 6*2629746
+  if (props.period == '6 Years') data_period = 72*2629746
   const { loading, err, data } = useQuery(TICKER_QUERY, {
     variables: {
       index: props.index,
